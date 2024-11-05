@@ -1,0 +1,74 @@
+Berikut adalah daftar dan penjelasan dari perintah-perintah Git yang umum digunakan melalui Command Prompt:
+
+### 1. **Inisialisasi dan Konfigurasi**
+   - **`git init`**: Menginisialisasi repositori Git baru di direktori lokal.
+   - **`git config --global user.name "Nama"`**: Mengatur nama pengguna untuk komit di seluruh repositori.
+   - **`git config --global user.email "email@example.com"`**: Mengatur email pengguna untuk komit di seluruh repositori.
+   - **`git config --list`**: Menampilkan konfigurasi Git yang sedang aktif.
+
+### 2. **Menambahkan Repositori Jarak Jauh**
+   - **`git remote add origin <URL>`**: Menambahkan repositori jarak jauh dengan nama `origin`.
+   - **`git remote -v`**: Menampilkan daftar repositori jarak jauh yang terhubung.
+
+### 3. **Status dan Log**
+   - **`git status`**: Menampilkan status perubahan di dalam repositori (file baru, file yang dimodifikasi, dll).
+   - **`git log`**: Melihat riwayat komit.
+   - **`git log --oneline`**: Menampilkan riwayat komit secara ringkas.
+
+### 4. **Operasi Menambahkan dan Menghapus File**
+   - **`git add <file>`**: Menambahkan file tertentu ke staging area untuk dikomit.
+   - **`git add .`**: Menambahkan semua perubahan (file baru dan modifikasi) ke staging area.
+   - **`git rm <file>`**: Menghapus file dari repositori dan staging area.
+   - **`git rm --cached <file>`**: Menghapus file dari staging area, tetapi tetap ada di direktori kerja.
+
+### 5. **Komit Perubahan**
+   - **`git commit -m "pesan"`**: Membuat komit dengan pesan yang diberikan.
+   - **`git commit -a -m "pesan"`**: Meng-`add` dan `commit` file yang sudah di-tracking sekaligus.
+
+### 6. **Branching (Cabang)**
+   - **`git branch`**: Menampilkan daftar cabang yang ada, serta cabang aktif.
+   - **`git branch <nama_cabang>`**: Membuat cabang baru.
+   - **`git checkout <nama_cabang>`**: Berpindah ke cabang tertentu.
+   - **`git checkout -b <nama_cabang>`**: Membuat cabang baru dan langsung berpindah ke cabang tersebut.
+   - **`git branch -d <nama_cabang>`**: Menghapus cabang.
+
+### 7. **Merging (Penggabungan)**
+   - **`git merge <nama_cabang>`**: Menggabungkan perubahan dari cabang lain ke cabang aktif.
+
+### 8. **Sinkronisasi dengan Repositori Jarak Jauh**
+   - **`git push`**: Mengirim komit dari cabang lokal ke repositori jarak jauh.
+   - **`git push origin <nama_cabang>`**: Mengirim komit dari cabang tertentu ke repositori jarak jauh.
+   - **`git fetch`**: Mengambil perubahan terbaru dari repositori jarak jauh tanpa menggabungkan ke cabang lokal.
+   - **`git pull`**: Mengambil dan menggabungkan perubahan dari repositori jarak jauh ke cabang aktif.
+
+### 9. **Stashing (Menyimpan Sementara)**
+   - **`git stash`**: Menyimpan perubahan yang belum di-commit untuk sementara, dan mengembalikan repositori ke kondisi komit terakhir.
+   - **`git stash list`**: Menampilkan daftar perubahan yang disimpan sementara.
+   - **`git stash apply`**: Menerapkan perubahan yang disimpan sementara ke repositori.
+   - **`git stash drop`**: Menghapus perubahan yang disimpan sementara dari daftar stash.
+
+### 10. **Melihat Perbedaan (Diff)**
+   - **`git diff`**: Menampilkan perubahan yang belum ditambahkan ke staging area.
+   - **`git diff --staged`**: Menampilkan perubahan yang sudah di-staging tapi belum di-commit.
+
+### 11. **Resetting (Mengembalikan Perubahan)**
+   - **`git reset <file>`**: Menghapus file dari staging area, tapi tetap menyimpan perubahan di working directory.
+   - **`git reset --hard <hash_komit>`**: Mengembalikan repositori ke keadaan tertentu sesuai komit yang dipilih (menghapus semua perubahan).
+   - **`git reset --soft <hash_komit>`**: Mengembalikan ke komit tertentu tanpa menghapus perubahan di staging area.
+
+### 12. **Membatalkan Komit**
+   - **`git revert <hash_komit>`**: Membuat komit baru untuk membatalkan perubahan dari komit yang dipilih, tanpa mengubah riwayat.
+
+### 13. **Menyimpan dan Menghitung Perubahan (Tagging dan Counting)**
+   - **`git tag <nama_tag>`**: Membuat tag baru di komit saat ini.
+   - **`git tag -a <nama_tag> -m "pesan"`**: Membuat tag dengan pesan yang menjelaskan perubahan pada komit tersebut.
+   - **`git count-objects -v`**: Menampilkan statistik dan ukuran objek yang disimpan Git.
+
+### 14. **Memperbaiki Nama atau Email di Komit Terakhir**
+   - **`git commit --amend --author="Nama <email@example.com>"`**: Mengubah nama atau email di komit terakhir.
+
+### 15. **Perintah Lain yang Berguna**
+   - **`git clone <URL>`**: Menggandakan repositori jarak jauh ke dalam direktori lokal.
+   - **`git show <hash_komit>`**: Menampilkan informasi mendetail tentang komit tertentu.
+   - **`git reflog`**: Menampilkan riwayat dari semua referensi yang telah digunakan (seperti checkout atau reset).
+
