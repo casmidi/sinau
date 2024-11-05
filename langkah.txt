@@ -1,0 +1,29 @@
+Ya, benar! Dalam Git, untuk menambahkan file ke dalam komit, langkah-langkah umumnya adalah sebagai berikut:
+
+1. **Menambahkan file ke staging area**: Menggunakan perintah `git add`. File yang ditambahkan ke staging area akan siap untuk dikomit. Anda bisa menambahkan satu per satu file atau semua file yang telah diubah.
+
+   - **Tambah satu file**:
+     ```bash
+     git add nama_file
+     ```
+   - **Tambah semua file yang berubah**:
+     ```bash
+     git add .
+     ```
+
+2. **Melakukan komit**: Setelah menambahkan file ke staging area, Anda perlu melakukan komit untuk menyimpan perubahan ke dalam riwayat Git. Setiap komit memerlukan pesan yang menjelaskan perubahan tersebut.
+
+   ```bash
+   git commit -m "Deskripsi perubahan"
+   ```
+
+### Contoh Alur Kerja
+
+Misalnya, Anda membuat perubahan di beberapa file dan ingin menyimpannya dalam satu komit:
+
+```bash
+git add .
+git commit -m "Memperbaiki tampilan dan menambahkan fitur pencarian"
+```
+
+Dengan demikian, Anda telah berhasil menyimpan perubahan ke dalam riwayat Git.
