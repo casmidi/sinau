@@ -1,0 +1,11 @@
+Untuk melepas hubungan direktori lokal dari repository jarak jauh di Git, Anda bisa menggunakan perintah berikut:
+
+```bash
+git remote remove origin
+```
+
+### Penjelasan
+- `git remote remove origin` akan menghapus koneksi `origin`, yang biasanya merupakan repository jarak jauh yang terhubung dengan repository lokal.
+- Setelah menjalankan perintah ini, repository lokal Anda tidak lagi terhubung dengan repository jarak jauh mana pun, sehingga Anda tidak akan bisa melakukan `git push` atau `git pull` ke repository yang dilepas tersebut, kecuali Anda menambahkan kembali remote dengan perintah `git remote add`.
+
+Perintah ini berguna jika Anda ingin mengganti repository jarak jauh atau sekadar memutus koneksi yang sudah tidak diperlukan.
