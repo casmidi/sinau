@@ -1,0 +1,29 @@
+Untuk menghapus file secara permanen baik di lokal maupun di repository remote, ikuti langkah-langkah berikut:
+
+1. **Hapus file di lokal dan tandai untuk dihapus di Git:**
+
+   ```bash
+   git rm panduan.txt
+   ```
+
+   Ini akan menghapus file `panduan.txt` dari direktori lokal Anda dan juga menandainya sebagai file yang dihapus di Git.
+
+2. **Commit perubahan penghapusan file:**
+
+   ```bash
+   git commit -m "Hapus panduan.txt"
+   ```
+
+   Ini akan menyimpan perubahan penghapusan di riwayat Git.
+
+3. **Push perubahan ke remote:**
+
+   ```bash
+   git push origin main
+   ```
+
+   Perintah ini akan mengirim perubahan ke branch `main` di repository remote, sehingga `panduan.txt` juga akan dihapus dari repository remote.
+
+**Catatan:**
+- Pastikan Anda mengganti `main` dengan nama branch yang sesuai jika repository Anda menggunakan branch yang berbeda.
+- `git rm` tidak hanya menandai file untuk dihapus dari repository, tetapi juga menghapusnya dari sistem file lokal Anda. Jika Anda hanya ingin menghapusnya dari repository tanpa menghapus dari lokal, Anda bisa menggunakan `git rm --cached panduan.txt`.
